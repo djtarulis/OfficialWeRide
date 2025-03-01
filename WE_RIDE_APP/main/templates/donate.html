@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="donate-content" data-aos="fade-down">
+    <h1>Support WE RIDE</h1>
+
+    <!-- QR Code Section -->
+    <h2>Donate Instantly</h2>
+    <p>Scan the QR code below to donate directly:</p>
+    <p>You can also visit <a href="https://give.rileykids.org/werideformiracleride"> here</a> to make a donation!</p>
+    <img src="{% static 'images/WERIDE_QR_CODE.png' %}" alt="Donation QR Code" class="qr-code">
+</div>
+{% endblock %}

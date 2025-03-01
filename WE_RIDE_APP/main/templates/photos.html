@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 data-aos="fade-up">Event Photos</h1>
+<p>If you would like to submit a photo to the gallery, please send it to us via the <a href="{% url 'contact' %}">contact</a> page!</p>
+
+{% if photos %}
+    <div class="photo-gallery">
+        {% for photo in photos %}
+            <div class="photo-item" data-aos="zoom-in">
+                <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+                <p>{{ photo.title }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>No photos available yet. Check back soon!</p>
+{% endif %}
+{% endblock %}

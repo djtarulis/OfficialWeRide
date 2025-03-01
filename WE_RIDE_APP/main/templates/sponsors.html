@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-section" data-aos="fade-down">
+    <h1>Sponsorships</h1>
+    <p>
+        Let me begin by thanking you in advance.  Without generous sponsors our mission and goals can be difficult to reach.
+    </p>
+    <p>
+        We Ride is a non-for-profit 501C3 Association.  We are dedicated to making Miracles happen for Riley Children of NWI.
+        We Ride has a wide range of fund-raising events to help accomplish our goals.
+    </p>  
+        
+    <p>
+        We host Bingos, have bake sales, Texas 
+        Holdem Tournaments, and concerts.  All of which take a lot of time and money to coordinate.  Donations help us keep 
+        the cost at a minimum so that all of the proceeds get donated to Riley Children's Hospital annually, in June.
+        I am humbly asking for a donation to help us cover the cost of hosting events.  Please consider one of the donation 
+        amounts below.  And thank you again for your consideration!
+    </p>
+        <p> Bronze level donation	$100  </p>
+
+        <p> Silver level donation	$250  </p>          
+            
+        <p> Gold level donation		$500  </p>
+
+    <hr>
+
+    <!-- Donation Interest Form -->
+    <h2>Interested in Being a Sponsor?</h2>
+    <p>Fill out the form below, and we will get in touch with you.</p>
+
+    <form method="post" class="sponsor-form">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- ✅ This renders the form fields -->
+        <button type="submit" class="button">Submit</button>
+    </form>
+</div>
+{% endblock %}
