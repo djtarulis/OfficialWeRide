@@ -1,6 +1,4 @@
 import dj_database_url
-
-from WE_RIDE_APP import WE_RIDE_APP
 """
 Django settings for WE_RIDE_APP project.
 
@@ -28,7 +26,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-secret-key-for-local')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [WE_RIDE_APP.onrender.com, 'localhost']
+ALLOWED_HOSTS = ['WE_RIDE_APP.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
