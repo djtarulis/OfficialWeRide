@@ -17,3 +17,4 @@ from WE_RIDE_APP.WE_RIDE_APP.settings import BASE_DIR
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'WE_RIDE_APP.WE_RIDE_APP.settings')
 
 application = get_wsgi_application()
+application = WhiteNoise(application, root=os.path.join(BASE_DIR, 'staticfiles'))
