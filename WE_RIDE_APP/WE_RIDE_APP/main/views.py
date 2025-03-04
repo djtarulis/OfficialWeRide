@@ -1,14 +1,14 @@
 from http.client import HTTPResponse
 import os
 from django.shortcuts import render, redirect
-from .models import Event, Sponsor, Photo
+from .models import Event, Photo
 from .forms import SponsorForm
 from django.core.mail import send_mail
 from django.conf import settings
 import markdown2
 
 def home(request):
-    home_path = os.path.join(settings.BASE_DIR, 'main', 'static', 'text', 'home.md')
+    home_path = os.path.join(settings.BASE_DIR, 'WE_RIDE_APP', 'main', 'static', 'text', 'home.md')
 
     with open(home_path, 'r', encoding='utf-8') as file:
         content = file.read()
@@ -18,7 +18,7 @@ def home(request):
     return render(request, 'home.html', {'content': html_content})
 
 def contact(request):
-    contact_path = os.path.join(settings.BASE_DIR, 'main', 'static', 'text', 'contact.md')
+    contact_path = os.path.join(settings.BASE_DIR, 'WE_RIDE_APP', 'main', 'static', 'text', 'contact.md')
 
     with open(contact_path, 'r', encoding='utf-8') as file:
         content = file.read()
@@ -54,7 +54,7 @@ def donate(request):
     return render(request, 'donate.html')
 
 def terms(request):
-    terms_path = os.path.join(settings.BASE_DIR, 'main', 'static', 'text', 'terms.md')
+    terms_path = os.path.join(settings.BASE_DIR, 'WE_RIDE_APP', 'main', 'static', 'text', 'terms.md')
 
     with open(terms_path, 'r', encoding='utf-8') as file:
         content = file.read()
@@ -64,7 +64,7 @@ def terms(request):
     return render(request, 'terms.html', {'content': html_content})
 
 def about(request):
-    about_path = os.path.join(settings.BASE_DIR, 'main', 'static', 'text', 'about.md')
+    about_path = os.path.join(settings.BASE_DIR, 'WE_RIDE_APP', 'main', 'static', 'text', 'about.md')
 
     with open(about_path, 'r', encoding='utf-8') as file:
         content = file.read()
@@ -77,7 +77,7 @@ def about(request):
     return render(request, 'about.html', {'content': html_content})
 
 def privacy(request):
-    privacy_path = os.path.join(settings.BASE_DIR, 'main', 'static', 'text', 'privacy.md')
+    privacy_path = os.path.join(settings.BASE_DIR, 'WE_RIDE_APP', 'main', 'static', 'text', 'privacy.md')
 
     with open(privacy_path, 'r', encoding='utf-8') as file:
         content = file.read()
