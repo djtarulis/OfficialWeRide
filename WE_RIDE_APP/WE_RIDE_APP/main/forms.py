@@ -10,6 +10,6 @@ class SponsorForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
             'phone': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Phone'}),
             'business_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Business Name'}),
-            'amount': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Amount'}),
+            'amount': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'You can leave this as 0 if you are not sure.'}),
             'message': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Tell us more about you!.'}),
             }

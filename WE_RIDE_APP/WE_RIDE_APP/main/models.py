@@ -19,7 +19,7 @@ class Sponsor(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=20)
     business_name = models.CharField(max_length=100, default='')
-    amount = models.DecimalField(max_digits=7, decimal_places=2)
+    amount = models.DecimalField(max_digits=25, decimal_places=2)
     message = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

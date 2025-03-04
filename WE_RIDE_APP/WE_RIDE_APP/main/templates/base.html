@@ -22,20 +22,23 @@
     </header>
 
     <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'about' %}">About Us</a>
-        <a href="{% url 'events' %}">Events</a>
-        <a href="{% url 'photos' %}">Photos</a>
-        <a href="{% url 'sponsors' %}">Sponsors</a>
-        <a href="{% url 'contact' %}">Contact</a>
-        <a href="{% url 'donate' %}" class="donate-button">Donate</a>
+     <header class="'header">
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <div class="navbar">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About Us</a>
+            <a href="{% url 'events' %}">Events</a>
+            <a href="{% url 'photos' %}">Photos</a>
+            <a href="{% url 'sponsors' %}">Sponsors</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'donate' %}" class="donate-button">Donate</a>
 
-        <!-- 🌙 Dark Mode Toggle -->
-        <button id="darkModeToggle" class="dark-mode-btn" title="Toggle Dark Mode">
-            <p>&#127769</p>
-        </button>
-    </div>
+            <!-- 🌙 Dark Mode Toggle -->
+            <button id="darkModeToggle" class="dark-mode-btn" title="Toggle Dark Mode">
+                <p>&#127769</p>
+            </button>
+        </div>
+     </header>
 
     <!-- Main Content Block -->
     <div class="content">
@@ -84,6 +87,12 @@
         duration: 1000,
         once: true
         });
+    </script>
+    <!-- Hamburger Menu -->
+    <script>
+        document.querySelector('.menu-toggle').onclick = function() {
+            document.querySelector('.navbar').classList.toggle('open');
+        };
     </script>
 
 </body>
