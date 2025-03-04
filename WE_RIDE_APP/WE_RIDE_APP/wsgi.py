@@ -8,11 +8,15 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
 """
 
 import os
+import sys
 
 from django.core.wsgi import get_wsgi_application
 from whitenoise import WhiteNoise
 
 from WE_RIDE_APP.WE_RIDE_APP.settings import BASE_DIR
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)  # This makes `main` visible
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'WE_RIDE_APP.WE_RIDE_APP.settings')
 
