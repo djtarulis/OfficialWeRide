@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback-secret-key-for-local')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://weride.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['weride.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
