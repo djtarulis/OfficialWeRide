@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['WE_RIDE_APP.onrender.com', 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'main',
+    'WE_RIDE_APP.main',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
